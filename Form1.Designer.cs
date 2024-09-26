@@ -33,10 +33,11 @@
             playButton = new Button();
             playerGuessLbl = new Label();
             incorrectGuessCount = new Label();
-            textBox1 = new TextBox();
+            userInput = new TextBox();
             incorrectGuessLabel = new Label();
             correctGuessLabel = new Label();
             correctGuessCount = new Label();
+            genNumButton = new Button();
             SuspendLayout();
             // 
             // titleLbl
@@ -81,19 +82,20 @@
             // incorrectGuessCount
             // 
             incorrectGuessCount.AutoSize = true;
+            incorrectGuessCount.Cursor = Cursors.No;
             incorrectGuessCount.Location = new Point(109, 254);
             incorrectGuessCount.Name = "incorrectGuessCount";
             incorrectGuessCount.Size = new Size(17, 20);
             incorrectGuessCount.TabIndex = 4;
             incorrectGuessCount.Text = "0";
             // 
-            // textBox1
+            // userInput
             // 
-            textBox1.Location = new Point(377, 246);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "1 -100";
-            textBox1.Size = new Size(94, 26);
-            textBox1.TabIndex = 5;
+            userInput.Location = new Point(377, 246);
+            userInput.Name = "userInput";
+            userInput.PlaceholderText = "1 -100";
+            userInput.Size = new Size(94, 26);
+            userInput.TabIndex = 5;
             // 
             // incorrectGuessLabel
             // 
@@ -122,15 +124,26 @@
             correctGuessCount.TabIndex = 8;
             correctGuessCount.Text = "0";
             // 
+            // genNumButton
+            // 
+            genNumButton.Location = new Point(550, 193);
+            genNumButton.Name = "genNumButton";
+            genNumButton.Size = new Size(90, 28);
+            genNumButton.TabIndex = 9;
+            genNumButton.Text = "Generate Number";
+            genNumButton.UseVisualStyleBackColor = true;
+            genNumButton.Click += genNumButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(911, 762);
+            Controls.Add(genNumButton);
             Controls.Add(correctGuessCount);
             Controls.Add(correctGuessLabel);
             Controls.Add(incorrectGuessLabel);
-            Controls.Add(textBox1);
+            Controls.Add(userInput);
             Controls.Add(incorrectGuessCount);
             Controls.Add(playerGuessLbl);
             Controls.Add(playButton);
@@ -149,9 +162,10 @@
         private Button playButton;
         private Label playerGuessLbl;
         private Label incorrectGuessCount;
-        private TextBox textBox1;
+        private TextBox userInput;
         private Label incorrectGuessLabel;
         private Label correctGuessLabel;
         private Label correctGuessCount;
+        private Button genNumButton;
     }
 }
