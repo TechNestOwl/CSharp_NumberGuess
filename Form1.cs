@@ -19,6 +19,12 @@ namespace NumberGuessingGame
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "My Application";
+            this.BackColor = Color.LightGray;
+
+            //adding my icon for Rock, Paper, Scissors Game [ to be implemented
+            //this.Icon = new Icon("appIcon.ico");
+
         }
         //initializing guess counter
         int guessCounter = 0;
