@@ -22,8 +22,12 @@ namespace NumberGuessingGame
             this.Text = "My Application";
             this.BackColor = Color.LightGray;
 
-            //adding my icon for Rock, Paper, Scissors Game [ to be implemented
+            //adding my icon for Rock, Paper, Scissors Game [ to be implemented ]
             //this.Icon = new Icon("appIcon.ico");
+
+            //need to establish an event to add a "greeting message with rules for game"
+            //this.welcomeBtn.Click += new EventHandler(welcomeBtn_Click);
+
 
         }
         //initializing guess counter
@@ -43,6 +47,9 @@ namespace NumberGuessingGame
         private void genNumButton_Click(object sender, EventArgs e)
         {
             generatedNum = generateRandomNum();
+
+            //implement and display a stopwatch. Have event end once game is won.
+
         }
 
 
@@ -63,6 +70,10 @@ namespace NumberGuessingGame
             {
                 MessageBox.Show("You guessed right, Congrats!");
                 guessCounter = 0;
+
+                // end timer  for the stopwatch
+                // log computer guess and user guest to score board.  [ Timer too? ]
+            
             }
         }
 
